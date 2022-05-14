@@ -1,0 +1,25 @@
+.wrapper-finish {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: auto;
+}
+
+.card-finish {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid rgb(165, 165, 165);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #4d4d4d;
+}
+
+.card-description {
+  color: #9a9a9a;
+}

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getInitData } from './store/actions/todolist';
+import ListPage from './pages/ListPage';
+import FormPage from './pages/FormPage';
 
 function App() {
+  const { loading, currentPage } = useSelector(state => state.todolist)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getInitData())
+  }, [])
+
+  if (loading) return <div className='loading-page'>Loading...</div>
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {(() => {
+        switch (currentPage) {
+          case 'form-create':
+            return <FormPage currentPage={currentPage} title="Create Todo" />
+          case 'form-edit':
+            return <FormPage currentPage={currentPage} title="Edit Todo" />
+          default:
+            return <ListPage />
+        }
+      })()}
     </div>
   );
 }

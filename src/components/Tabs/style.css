@@ -1,0 +1,16 @@
+.wrapper-tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.tabs {
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.tabs.active {
+  color: red;
+  border-bottom: 2px solid red;
+}

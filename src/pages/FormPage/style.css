@@ -1,0 +1,30 @@
+.wrapper-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.title-form {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-btn-cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  left: 20px;
+}

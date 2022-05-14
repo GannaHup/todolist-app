@@ -1,0 +1,25 @@
+.button-wrapper {
+  width: 100%;
+  padding: 4px 20px;
+  border-radius: 4px;
+  background-color: red;
+  font-weight: 500;
+  color: white;
+}
+
+.button-wrapper.circle {
+  font-size: 24px;
+  padding: 6px 17px;
+  background-color: red;
+  border-radius: 1000px;
+  text-align: center;
+}
+
+.button-wrapper.line {
+  width: 100%;
+  padding: 4px 20px;
+  border-radius: 4px;
+  background-color: white;
+  border: 2px solid red;
+  color: red;
+}

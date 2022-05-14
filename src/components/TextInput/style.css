@@ -1,0 +1,17 @@
+.wrapper-input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label-field {
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  padding: 4px 12px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
